@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>WalletPay</title>
+
+        <meta name="description" content="" />
+        <meta name="author" content="Techvillage" />
+        <meta name="copyright" content="Techvillage" />
+        <meta
+            name="generator"
+            content="Documenter v2.0 http://rxa.li/documenter"
+        />
+        <meta name="date" content="2018-01-09T00:00:00+01:00" />
+
+        <link
+            rel="stylesheet"
+            href="assets/css/documenter_style.css"
+            media="all"
+        />
+
+        <link rel="stylesheet" href="assets/css/custom.css" media="screen" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/cufon.js"></script>
+        <script src="assets/js/font.js"></script>
+        <script>
+            Cufon.replace("h1, h2, h3, h4, h5, h6");
+        </script>
+        <script src="assets/js/jquery.scrollTo.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+
+        <script>
+            document.createElement("section");
+            var duration = "450",
+                easing = "easeOutExpo";
+        </script>
+        <script src="assets/js/script.js"></script>
+
+        <style>
+            html {
+                background-color: #f3f3f3;
+                color: #585858;
+            }
+            ::-moz-selection {
+                background: #111111;
+                color: #f1f1f1;
+            }
+            ::selection {
+                background: #111111;
+                color: #f1f1f1;
+            }
+            #documenter_sidebar #documenter_logo {
+                background-image: url(assets/images/image_1.png);
+            }
+            a {
+                color: #5532f5;
+                text-decoration: underline;
+            }
+            .btn {
+                border-radius: 3px;
+            }
+            .btn-primary {
+                background-image: -moz-linear-gradient(top, #585858, #3b3b3b);
+                background-image: -ms-linear-gradient(top, #585858, #3b3b3b);
+                background-image: -webkit-gradient(
+                    linear,
+                    0 0,
+                    0 585858%,
+                    from(#333333),
+                    to(#3b3b3b)
+                );
+                background-image: -webkit-linear-gradient(
+                    top,
+                    #585858,
+                    #3b3b3b
+                );
+                background-image: -o-linear-gradient(top, #585858, #3b3b3b);
+                background-image: linear-gradient(top, #585858, #3b3b3b);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#585858', endColorstr='#3B3B3B', GradientType=0);
+                border-color: #3b3b3b #3b3b3b #bfbfbf;
+                color: #f9f9f9;
+            }
+            .btn-primary:hover,
+            .btn-primary:active,
+            .btn-primary.active,
+            .btn-primary.disabled,
+            .btn-primary[disabled] {
+                border-color: #585858 #585858 #bfbfbf;
+                background-color: #3b3b3b;
+            }
+            hr {
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #f9f9f9;
+            }
+            #documenter_sidebar,
+            #documenter_sidebar ul a {
+                background-color: #333333;
+                color: #f1f1f1;
+            }
+            #documenter_sidebar ul a {
+                -webkit-text-shadow: 1px 1px 0px #444444;
+                -moz-text-shadow: 1px 1px 0px #444444;
+                text-shadow: 1px 1px 0px #444444;
+            }
+            #documenter_sidebar ul {
+                border-top: 1px solid #222222;
+            }
+            #documenter_sidebar ul a {
+                border-top: 1px solid #444444;
+                border-bottom: 1px solid #222222;
+                color: #f1f1f1;
+            }
+            #documenter_sidebar ul a:hover {
+                background: #111111;
+                color: #f1f1f1;
+                border-top: 1px solid #111111;
+            }
+            #documenter_sidebar ul a.current {
+                background: #111111;
+                color: #f1f1f1;
+                border-top: 1px solid #111111;
+            }
+            #documenter_copyright {
+                display: block !important;
+                visibility: visible !important;
+            }
+        </style>
+    </head>
+    <body class="documenter-project-fundly">
+        <div id="documenter_sidebar">
+            <a href="#documenter_cover" id="documenter_logo"></a>
+            <ul id="documenter_nav">
+                <li>
+                    <a
+                        style="text-decoration: none"
+                        class="current"
+                        href="index.html#documenter_cover"
+                        >Start</a
+                    >
+                </li>
+
+                <!--	<li><a href="#server_requirements" title="Server Requirements">Server Requirements</a></li> -->
+                <li>
+                    <a
+                        style="text-decoration: none"
+                        href="index.html#installation"
+                        title="Installation"
+                        >Project Setup</a
+                    >
+                </li>
+                <li>
+                    <a
+                        style="text-decoration: none"
+                        href="index.html#release_apk"
+                        title="Generate Release APK"
+                        >Generate Release APK</a
+                    >
+                </li>
+                <li>
+                    <a
+                        style="text-decoration: none"
+                        href="index.html#release_abb"
+                        title="Generate Release AAB"
+                        >Generate Release AAB</a
+                    >
+                </li>
+                <li>
+                    <a
+                        style="text-decoration: none"
+                        href="index.html#android_studio_genreate_apk"
+                        title="Installation"
+                        >Generate Release (APK/AAB) using Android Studio</a
+                    >
+                </li>
+            </ul>
+            <div id="documenter_copyright">
+                Copyright Techvillage 2024<br />
+                made with the
+                <a href="http://rxa.li/documenter" style="color: white"
+                    >Documenter v2.0</a
+                >
+            </div>
+        </div>
+        <div id="documenter_content" />
+        <section id="documenter_cover">
+            <h1>WalletPay - PayMoney Multi Wallet Mobile App</h1>
+            <div id="documenter_buttons"></div>
+            <hr />
+            <ul>
+                <li>Created: 7 May, 2023</li>
+                <li>Latest update: 29 September, 2024</li>
+                <li>By: Techvillage</li>
+                <li>
+                    Email:
+                    <a href="https://support.techvill.org/"
+                        >support@techvill.org</a
+                    >
+                </li>
+            </ul>
+            <p></p>
+        </section>
+
+        <section id="installation">
+            <div class="page-header">
+                <h3>React Native Project Setup</h3>
+                <hr class="notop" />
+            </div>
+            <p
+                style="
+                    margin: 18px 0px;
+                    padding: 0px;
+                    border: 0px;
+                    outline: 0px;
+                    font-family: Arial, verdana, arial, sans-serif;
+                    vertical-align: baseline;
+                    line-height: 1.5em;
+                    color: rgb(56, 56, 56);
+                    background-color: rgb(238, 238, 238);
+                "
+            >
+                Follow these guidelines to generate the APK file
+            </p>
+            <div>
+                <ol>
+                    <li>
+                        Initially, extract the
+                        <strong>sourcecode_v1.3.2.zip</strong> file.
+                    </li>
+                    <br />
+                    <li>
+                        If you want, you can change your
+                        <strong>app name</strong>,
+                        <strong> app version</strong>
+                        and
+                        <strong>applicationId.</strong>
+                        <br />
+                        <p style="margin-top: 5px">
+                            i. For changing the app name go to
+                            <br /><strong
+                                >projectName\android\app\src\main\res\values\strings.xml.</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/change_app_name.png"
+                            alt="Change app name"
+                            style="width: 800px; height: auto"
+                        />
+                        <br />
+                        <p>
+                            To change the <strong>applicationId</strong>. 
+                        </p> 
+                        <p>
+                            Search <strong>“com.paymoney”</strong> in our search
+                            bar in any code editor and replace
+                            <strong>“com.company.com”</strong>
+                        </p>
+                        <img
+                            src="./assets/images/applicationid.png"
+                            alt="Change app name"
+                            style="width: auto; height: auto"
+                        />
+                        <p>
+                            Go to
+                            <strong
+                                >projectFolder\android\app\build.gradle</strong
+                            >
+                            <br />
+                            Search
+                            <strong>“versionName”</strong> and change the app
+                            version like <strong>versionName=”1.0.2”</strong>.
+                            and change <strong>versionCode</strong> (version
+                            code must be a number like=3)
+                        </p>
+                        <img
+                            src="./assets/images/cahngeVersionCode.png"
+                            alt="Change version code"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                    <br />
+                    <li>
+                        <p>
+                            Go to the <strong>“.env”</strong> file in the
+                            project root folder.
+                        </p>
+                        <p>
+                            i. Set the base URL using
+                            <strong>BASE_URL_VERISON =</strong>
+                            your_web_live_url/api/v2
+                        </p>
+                        <img
+                            src="./assets/images/env.png"
+                            alt="Change Env"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                    <br />
+                    <li>
+                        <p>
+                            To customize the app icon which you want to launch
+                            into your device please create an icon with
+                            <strong>1024*1024</strong> size and convert it from
+                            the following website. ( Recommended File Type: png
+                            )
+                        </p>
+                        <p>
+                            i. Go to
+                            <a href="https://easyappicon.com/."
+                                >https://easyappicon.com/.</a
+                            >
+                        </p>
+                        <p>
+                            ii. Upload your resized image & download the file.
+                            <strong
+                                >(Make sure to download “iOS + Adaptive
+                                Icon”)</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/genrerateAppIcon.png"
+                            alt="genrerateAppIcon"
+                        />
+                        <p>iii. Extract the downloaded zip file.</p>
+                        <p>
+                            iv. Copy <strong>mipmap-**pi</strong> files under
+                            the “android” folder from the extracted folder.
+                        </p>
+                        <img
+                            src="./assets/images/appIcon.png"
+                            alt="App Icon"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            v. Replace the mipmap-**pi files from the directory
+                            <strong
+                                >projectName\android\app\src\main\res</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/app_icon.png"
+                            alt="Replace App Icon"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                    <li>
+                        <p>
+                            To customize your app splash screen icon which you
+                            want to display in your app please create an icon
+                            with <strong>240×240 dp size</strong> and convert it
+                            from the following website. ( Recommended File Type:
+                            png )
+                        </p>
+                        <p>
+                            i. Go to
+                            <a href="https://www.appicon.co/#image-sets"
+                                >https://www.appicon.co/#image-sets</a
+                            >.
+                        </p>
+                        <p>
+                            ii. Change your file name to
+                            <strong>“launch_screen”.</strong>
+                        </p>
+                        <p>
+                            iii. Upload your resized image & download the file.
+                            <strong
+                                >**(Before upload must change your file name to
+                                “launch_screen”)</strong
+                            >
+                        </p>
+                        <p>iv. Extract the downloaded zip file.</p>
+                        <p>
+                            v. Copy <strong>drawable-**pi</strong> files under
+                            the <strong>“android”</strong> folder from the
+                            extracted folder.
+                        </p>
+                        <img
+                            src="./assets/images/app_splash_icon.png"
+                            alt="Change app splash"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            vi. Replace the drawable-**pi files from the
+                            directory
+                            <strong
+                                >projectName\android\app\src\main\res\drawable.</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/genrarateSplashScreen.png"
+                            alt="Change Splash Screen"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            vii. Replace <strong>launch_screen.png</strong> to
+                            <strong>
+                                “drawable-xxxhdpi\launch_screen.png”</strong
+                            >
+                            file.
+                        </p>
+                        <img
+                            src="./assets/images/splashScreen.png"
+                            alt="Replace Splash Screen"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                    <li>
+                        <p>
+                            If you want to change the app icon please go to
+                            <strong>projectName\src\assets\image\logo</strong>
+                            and replace your logo with
+                            <strong>“dark_logo.png”</strong> (For dark mode) and
+                            <strong>“light_logo.png”</strong> (For light mode) (
+                            Recommended Dimension:
+                            <strong>160px * 40px</strong>, Recommended File
+                            Type: png ).
+                        </p>
+                        <img
+                            src="./assets/images/logo.png"
+                            alt="Change Logo"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                    <li>
+                        <p>
+                            Setting up the development environment for React
+                            Native –
+                        </p>
+                        <p>
+                            i. You will need Node, the React Native command line
+                            interface and JDK
+                        </p>
+                        <p>
+                            ii. Install nodeJs, for installing the nodeJs
+                            properly, follow these
+                            <a target="_blank" href="./nodeJs.html"
+                                >guidelines</a
+                            >. (Our recommended nodeJs version 18 or higher).
+                        </p>
+                        <p>
+                            iii. Open the terminal on the project folder & run
+                            the following command lines for installing all
+                            dependencies
+                            <strong> npm install or yarn install</strong>. (For
+                            installing yarn follow this
+                            <a
+                                target="_blank"
+                                href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable"
+                                >guideline</a
+                            >)
+                        </p>
+                        <p>
+                            Jdk environment variables must be set up and
+                            installed on your machine including react native
+                            framework. To set up the react native environment
+                            properly please follow these
+                            <a target="_blank" href="./reactnative.html"
+                                >guidelines</a
+                            >.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong
+                                >Run the application on the Android
+                                simulator-</strong
+                            >
+                        </p>
+                        <p>
+                            i. Must be setup android studio. (Properly setup
+                            android studio following this
+                            <a
+                                target="_blank"
+                                href="https://reactnative.dev/docs/environment-setup?guide=native"
+                                >guideline</a
+                            >. **This application uses React Native Cli version)
+                        </p>
+                        <p>
+                            ii. If your machine has already react native
+                            environment setup you can easily run an application
+                            with one command line.
+                        </p>
+                        <p>
+                            iii. Open the terminal on the project folder & run
+                            the following command line.
+                            <br /><strong
+                                >npm run android or yarn run android
+                            </strong>
+                        </p>
+                        <img
+                            src="./assets/images/run_app.png"
+                            alt="Run Application"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>Application run in your Android simulator</p>
+                        <img
+                            src="./assets/images/runOnMobile.png"
+                            alt="Run on Simulator"
+                            style="width: auto; height: auto"
+                        />
+                    </li>
+                    <li>
+                        <p>
+                            <strong
+                                >Generating an keystore before creating a
+                                release APK or AAB</strong
+                            >
+                        </p>
+                        <p>
+                            If your machine is already react native environment
+                            setup you can easily generate a release apk APK with
+                            the following few guidelines – <br />You can
+                            generate a private signing key using keytool. For
+                            Windows
+                        </p>
+                        <p>
+                            On Windows, keytool must be run from <br />
+                            <strong>C:\Program Files\Java\jdkx.x.x_x\bin</strong
+                            >, as <strong>administrator.</strong><br /><strong
+                                >keytool -genkeypair -v -storetype PKCS12
+                                -keystore keystore.keystore -alias my-key-alias
+                                -keyalg RSA -keysize 2048 -validity
+                                10000</strong
+                            >
+                        </p>
+                        <p>
+                            <strong>Step 1:</strong><br />Keytool will ask for a
+                            keystore password. Enter the password and confirm
+                            the password in the screenshot below:
+                        </p>
+                        <img
+                            src="./assets/images/genreateKeyStore.png"
+                            alt="Generate KeyStore"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            <strong>Step 2:</strong><br />Next, keytool will ask
+                            for additional information. Supply appropriately
+                            like the screenshot below:
+                        </p>
+                        <img
+                            src="./assets/images/keyStore Info.png"
+                            alt="Information KeyStore"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            This command prompts you for passwords for the
+                            keystore and key and for the Distinguished Name
+                            fields for your key. It then generates the keystore
+                            as a file called <strong>keystore.keystore</strong>.
+                            (Please securely store your keystore file, keystore
+                            password and alias password for future version
+                            updates.)
+                        </p>
+                        <img
+                            src="./assets/images/KeyStore.png"
+                            alt="KeyStore File"
+                            style="width: 800px; height: auto"
+                        />
+                        <p><strong>Setting up Gradle variables</strong></p>
+                        <p>
+                            Place the <strong>keystore.keystore</strong> file
+                            under the <strong>~/android/app</strong> directory
+                            in your project folder. <br />Edit the file
+                            <strong>~/.gradle/gradle.properties</strong> or
+                            <strong>android/gradle.properties</strong>, and add
+                            the following (replace ***** with the correct
+                            keystore password, alias and key password).<br />
+                            <strong
+                                >MYAPP_UPLOAD_STORE_PASSWORD=***** (Place Store
+                                Password) <br />MYAPP_UPLOAD_KEY_PASSWORD=*****
+                                (Place Key Password)</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/placeKeystorePassword.png"
+                            alt="KeyStore File"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            Search <strong>buildTypes</strong> then change
+                            <strong>signingConfig signingConfigs.debug</strong>
+                            to
+                            <strong
+                                >signingConfig signingConfigs.release</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/relase apk mood.png"
+                            alt="Release Apk Build"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="release_apk">
+            <div class="page-header">
+                <h3>React Native App Generate Release APK for Android</h3>
+                <hr class="notop" />
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        <p><strong>Generate Release APK</strong></p>
+                        <p style="margin-bottom: 0px !important">
+                            Open the terminal on the project folder & run the
+                            following command line one by one
+                        </p>
+                        <p style="margin: 10px 0 !important">
+                            <strong
+                                >npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/Build Debug Apk.png"
+                            alt="Build Debug Apk"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            <strong
+                                >cd android <br />
+                                gradlew assembleRelease</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/buildPkDebug.png"
+                            alt="Debug Apk"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            If all the commands successfully run you will see
+                            the apk file on
+                            <br />
+                            <strong
+                                >\android\app\build\outputs\apk\release\app-release.apk</strong
+                            >
+                        </p>
+                        <p>
+                            Now you can install the generated APK to your
+                            android phone
+                        </p><p>After complete generate release APK them clean your gradle file using this command <br><strong>gradlew clean</strong></p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="release_abb">
+            <div class="page-header">
+                <h3>React Native App Generate Release AAB for Android</h3>
+                <hr class="notop" />
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        <p>
+                            <strong
+                                >Generate Release AAB for upload Play
+                                Store</strong
+                            >
+                        </p>
+                        <p style="margin-bottom: 0px !important">
+                            Open the terminal on the project folder & run the
+                            following command line one by one
+                        </p>
+                        <p style="margin: 10px 0 !important">
+                            <strong
+                                >npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/Build Debug Apk.png"
+                            alt="Build Debug Apk"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            <strong
+                                >cd android <br />
+                                gradlew bundleRelease</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/buildPkDebug.png"
+                            alt="Debug Apk"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            If all the commands successfully run you will see
+                            the apk file on
+                            <br />
+                            <strong
+                                >\android\app\build\outputs\bundle\release\app-release.aab</strong
+                            >
+                        </p>
+                        <p>
+                            Before uploading the application change the
+                            application name
+                            <strong>“app-release.aab”</strong> to
+                            <strong>“yourProjectName.aab”</strong> like
+                            <strong>Paymoney.aab</strong>.
+                        </p>
+                        <p>After complete generate release AAB them clean your gradle file using this command <br><strong>gradlew clean</strong></p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="android_studio_genreate_apk">
+            <div class="page-header">
+                <h3>Generate Release (APK/AAB) using Android Studio</h3>
+                <hr class="notop" />
+            </div>
+            <div>
+                <ol>
+                    <li>
+                        <p>
+                            <strong
+                                >Set Up Your Android Production Environment
+                            </strong>
+                        </p>
+                        <p>
+                            To properly setup android studio follow the
+                            <a
+                                target="_blank"
+                                href="https://reactnative.dev/docs/environment-setup?guide=native"
+                                >guideline</a
+                            >. **(This application uses React Native Cli)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Generate a Release APK using
+                            <strong>Android Studio</strong>
+                        </p>
+                        <p>
+                            Open <strong>projectFolder/android</strong> in
+                            <strong>Android Studio –</strong>
+                        </p>
+                        <img
+                            src="./assets/images/oepnAndroid.png"
+                            alt="Open Project in Android"
+                            style="width: auto; height: auto"
+                        />
+                        <p>
+                            Navigate to the Build tab, then click on
+                            <strong>Generate signed bundle / APK</strong>
+                        </p>
+                        <img
+                            src="./assets/images/selectBuildTap.png"
+                            alt="Build Tap"
+                            style="width: auto; height: auto"
+                        />
+                        <p>
+                            Select <strong>APK</strong> to generate a
+                            <strong>release APK</strong> or select Android
+                            <strong>App Bundle(AAB)</strong> to generate a
+                            <strong>release AAB (Play Store)</strong> for your
+                            React Native Android project. Then, Click on
+                            <strong>Next</strong>
+                        </p>
+                        <img
+                            src="./assets/images/nextClick.png"
+                            alt="Build Tap"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            Under the <strong>Key store</strong> path click
+                            <strong>Create new..</strong>
+                        </p>
+                        <img
+                            src="./assets/images/createKeystore.png"
+                            alt="Create New KeyStore"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            Pick a path like
+                            <strong>C:\Users\user\Desktop</strong>
+                        </p>
+                        <img
+                            src="./assets/images/keystorePath.png"
+                            alt="keystorePath"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            Select passwords for the keystore and key and return
+                            the certificate information.
+                        </p>
+                        <img
+                            src="./assets/images/keystoreInformation.png"
+                            alt="keystorePath"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            **Please securely store your keystore file, keystore
+                            password and alias password for future version
+                            updates.
+                        </p>
+                        <p>Click <strong>Next</strong> button</p>
+                        <img
+                            src="./assets/images/okNext.png"
+                            alt="Click Next"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            Thus, click on OK, then click on Next. Select
+                            <strong>release or debug</strong> and click
+                            <strong>Create</strong>.
+                        </p>
+                        <img
+                            src="./assets/images/clickReasle.png"
+                            alt="Click Release"
+                            style="width: 800px; height: auto"
+                        />
+                        <p>
+                            After finish build
+                            <strong
+                                >projectFolder/android/app/release/app-release.apk</strong
+                            >
+                        </p>
+                        <img
+                            src="./assets/images/buildAndroid.png"
+                            alt="Build Android"
+                            style="width: 800px; height: auto"
+                        />
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </body>
+</html>
